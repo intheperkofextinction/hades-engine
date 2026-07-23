@@ -1,8 +1,9 @@
+from config import CONN_INFO
 import asyncio
 import psycopg
 
 async def calculate_live_exposure():
-    conn_info = "dbname=hades_risk user=hades_admin password=hades_secure_pass host=127.0.0.1 port=5432"
+    conn_info = CONN_INFO
     
     print("[+] Connecting to Hades Risk Vault...")
     
