@@ -1,3 +1,4 @@
+from config import CONN_INFO
 import asyncio
 import random
 import time
@@ -30,7 +31,7 @@ async def generate_mock_trade():
     )
 
 async def run_ingestion_engine():
-    conn_info = "dbname=hades_risk user=hades_admin password=hades_secure_pass host=127.0.0.1 port=5432"
+    conn_info = CONN_INFO
     
     print("[+] Initializing Hades High-Throughput Streaming Engine...")
     print("[+] Establishing asynchronous worker pools...")
