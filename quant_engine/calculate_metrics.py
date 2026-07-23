@@ -1,10 +1,11 @@
+from config import CONN_INFO
 import asyncio
 import psycopg
 import pandas as pd
 import numpy as np
 
 async def compute_portfolio_risk_profiles():
-    conn_info = "dbname=hades_risk user=hades_admin password=hades_secure_pass host=127.0.0.1 port=5432"
+    conn_info = CONN_INFO
     
     print("[+] Fetching historical market assets out of Postgres...")
     
