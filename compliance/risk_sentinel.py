@@ -1,3 +1,4 @@
+from config import CONN_INFO
 import asyncio
 import psycopg
 import pandas as pd
@@ -9,7 +10,7 @@ MAX_VAR_PORTFOLIO_PCT = 0.15   # Max allowed 95% VaR: 15% of Portfolio Value
 MAX_CVAR_PORTFOLIO_PCT = 0.20  # Max allowed 95% CVaR: 20% of Portfolio Value
 
 async def evaluate_compliance_and_sentinel():
-    conn_info = "dbname=hades_risk user=hades_admin password=hades_secure_pass host=127.0.0.1 port=5432"
+    conn_info = CONN_INFO
     
     print("[+] Connecting to Hades Vault to establish Compliance Audit Tables...")
     
