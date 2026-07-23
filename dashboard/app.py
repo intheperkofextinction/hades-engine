@@ -1,3 +1,4 @@
+from config import CONN_INFO
 import streamlit as st
 import psycopg
 import pandas as pd
@@ -14,7 +15,7 @@ st.set_page_config(
 st.title("🛡️ HADES Quantitative Risk & Execution Desk")
 st.caption("Institutional Asset Management & Automated Compliance Monitoring Platform")
 
-DB_INFO = "dbname=hades_risk user=hades_admin password=hades_secure_pass host=127.0.0.1 port=5432"
+DB_INFO = CONN_INFO
 
 def load_data():
     conn = psycopg.connect(DB_INFO)
