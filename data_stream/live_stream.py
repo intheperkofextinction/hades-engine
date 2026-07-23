@@ -1,10 +1,11 @@
+from config import CONN_INFO
 import asyncio
 import random
 import psycopg
 from datetime import datetime
 
 async def run_live_feed_simulation():
-    conn_info = "dbname=hades_risk user=hades_admin password=hades_secure_pass host=127.0.0.1 port=5432"
+    conn_info = CONN_INFO
     
     print("[+] Initializing Real-Time Market Feed Pipe...")
     
