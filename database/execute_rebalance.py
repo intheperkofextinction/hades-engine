@@ -1,3 +1,4 @@
+from config import CONN_INFO
 import asyncio
 import psycopg
 from datetime import datetime, timezone
@@ -5,7 +6,8 @@ from datetime import datetime, timezone
 MAX_ALLOCATION_PERCENTAGE = 15.0
 
 async def execute_smart_rebalancing():
-    conn_info = "dbname=hades_risk user=hades_admin password=hades_secure_pass host=127.0.0.1 port=5432"
+    conn_info = CONN_INFO
+
     
     print("[+] Waking up Hades Automated Execution Desk...")
     
